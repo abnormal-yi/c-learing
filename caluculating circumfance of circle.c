@@ -1,21 +1,19 @@
 #include <stdio.h>
 
-int main(){
-
-    const double PI =3.14159;
-    double radious;
-    double circumfarance;
+int main() {
+    const double PI = 3.14159;
+    double radius;
+    double circumference;
     double area;
 
-    printf("enter radiousi");
-    scanf( %lf ,&radious);
+    printf("Enter radius: ");
+    scanf("%lf", &radius);
 
-    circumfance= 2 * PI * radious;
-    area= PI * radious * radious;
+    circumference = 2 * PI * radius;
+    area = PI * radius * radius;
 
-    printf("\ncurcumfance of circle is:%lf", circumfarance);
-    printf("area that circle is %lf",area);
-    
+    printf("\nCircumference of circle is: %lf\n", circumference);
+    printf("Area of circle is: %lf\n", area);
 
-    return=0;
+    return 0;
 }

@@ -1,97 +1,123 @@
 #include <stdio.h>
 #include <ctype.h>
+#include <stdlib.h> // Added for srand and rand functions
 #include <time.h>
 
-//constants 
-const min=1;
-const max=6;
-const minmoney=100;
-const maxmoney=100000;
-const minwithdarw=200;
-const maxwithdarw=10000;
+// Constants should be defined with a data type
+const double min = 1;
+const double max = 6;
+const double minmoney = 100;
+const double maxmoney = 100000;
+const double minwithdraw = 200;
+const double maxwithdraw = 10000;
 
+int main() {
+    // Variables
+    double balance;
+    char levels;
+    int luckynum;
 
+    // Constant arrays should be defined using 2D array syntax
+    char Qlevels[][100] = {"A: EASY      ODD 1.50   @100  total game you will play",
+                           "B: MEDIUM    ODD.4.50   @ 300 total game you will play",
+                           "C: DIFICULT  ODD 9.50   @ 500 total game you will play"};
 
-int main(){
+    // Removed unnecessary array option[] and answers[] since they are not used
 
-//variables
-double balance;
-int unit;
-char Qlevels[] [100]={"A: EASY      ODD 1.50   @100  total game you will play",
-                     "B: MEDIUM    ODD.4.50   @ 300 total game you will play",
-                     "C: DIFICULT  ODD 9.50   @ 500 total game you will play"};
+    printf("*******************YI********************LUCKY*******GAME*************************\n");
+    printf("HELLO YOUR WELCOME\n");
+    printf("**********************************************************************************\n");
+    printf("TO PLAY  FIRST STAKE YOUR AMOUNT     MINIMUM 100 , MAXIMUM 100000: ");
+    scanf("%lf", &balance);
 
-char   option[] [3]={"A","B","C"}      
+    // Check if the amount of money is within the range
+    if (balance >= minmoney && balance <= maxmoney) {
+        printf("Congrat You have successfully deposited %lf\n", balance);
+    } else {
+        printf("STAKE (MINIMUM 100 MAXIMUM 100000)\n");
+        return 1; // Exit the program with error code
+    }
 
-char   answers[] [3]={"A","B","C"}   
+    // Levels
+    printf("***************************************************************************************************\n");
+    printf("balance %lf\n", balance);
+    printf("Choose LEVELS\n");
+    printf("%s\n", Qlevels);
 
-int luckynum,i;
-double  ebbalance;
-double mbbalance;
-double dbbalance;
+    // Get user's choice of level
+    printf("Enter level (A/B/C): ");
+    scanf(" %c", &levels); // Added a space before %c to consume whitespace characters
 
+    levels = toupper(levels); // Convert to uppercase
 
-printf("*******************YI********************LUCKY*******GAME*************************");
-printf("HELLO YOUR WELCOME ");
-printf("**********************************************************************************");
-printf("TO PLAY  FIRST STAKE YOUR AMOUNT     MINMUM 100 ,MAX100000: ");
-scanf(%lf, &balance);
+    switch (levels) {
+        case 'A':
+            printf("You have chosen EASY level\n");
+            printf("Guess a number between 1 and 3: ");
+            scanf("%d", &luckynum);
 
-//check that amount of money
-if (if 100 <= balance <= 100000)
-{
- printf("Congrat You have succefull deposit %lf",balance);
+            // Check if the guessed number is between 1 and 3
+            if (luckynum < 1 || luckynum > 3) {
+                printf("Invalid number! Choose between 1 and 3.\n");
+                return 1; // Exit the program with error code
+            }
 
-}
-else{
-    print("STAKE (MINMUM 100 MAXMIM 10000)")
-}
+            // Seed the random number generator with the current time
+            srand(time(NULL));
 
-//Levels
+            // Generate and print random lucky numbers
+            for (int i = 0; i < luckynum; i++) {
+                int lucky = (rand() % 3) + 1; // Generates a random number between 1 and 3
+                printf("Lucky number %d: %d\n", i + 1, lucky);
+            }
+            break;
 
-print("***************************************************************************************************");
-print("balance %lf",balance);
-print(choose LEVELS\n);
-ebbalance=balance/100;
-mbbalance=balance/300;
-dbbalance=balance/500;
-print("%s\n", Qlevels  );
+        case 'B':
+            printf("You have chosen MEDIUM level\n");
+ printf("Guess a number between 1 and 6: ");
+            scanf("%d", &luckynum);
 
-//     jinsi  ya display mulitpo choise
+            // Check if the guessed number is between 1 and 6
+            if (luckynum < 1 || luckynum > )6 {
+                printf("Invalid number! Choose between 1 and 6.\n");
+                return 1; // Exit the program with error code
+            }
 
-scanf(%s,&levels);
+            // Seed the random number generator with the current time
+            srand(time(NULL));
 
-levels=touppercase(levels);
+            // Generate and print random lucky numbers
+            for (int i = 0; i < luckynum; i++) {
+                int lucky = (rand() % 6) + 1; // Generates a random number between 1 and 6
+                printf("Lucky number %d: %d\n", i + 1, lucky);
+            }
+            break;
 
-switch (levels)
-{
-case EASY:
-printf("this you have to guess  between  three  numbers 1 up to 3   eg 2 Goodluck");
-printf("ENTER YOUR LUCKY NUMBER:");
-scanf(%d,luckynum);
+        case 'C':
+            printf("You have chosen DIFFICULT level\n");
+            printf("Guess a number between 1 and 9: ");
+            scanf("%d", &luckynum);
 
-//check number
-if(1<=luckynum>=3){
-    // Seed the random number generator with the current time 
-     srand(time(NULL)); 
+            // Check if the guessed number is between 1 and 9
+            if (luckynum < 1 || luckynum > 3) {
+                printf("Invalid number! Choose between 1 and 9.\n");
+                return 1; // Exit the program with error code
+            }
 
-} for (i = 0; i < luckynums; i++) { 
+            // Seed the random number generator with the current time
+            srand(time(NULL));
 
-    int luckynums = (rand() % 3) + 1; // Generates a random number between 1 and 3
+            // Generate and print random lucky numbers
+            for (int i = 0; i < luckynum; i++) {
+                int lucky = (rand() % 9) + 1; // Generates a random number between 1 and 9
+                printf("Lucky number %d: %d\n", i + 1, lucky);
+            }
+            break;
 
-    printf("lucky number %d: %d\n", i+1, luckynum); 
+        default:
+            printf("Invalid level choice!\n");
+            return 1; // Exit the program with error code
+    }
 
-  } 
-
-}
-else{
-
-}
-    break;
-
-default:
-    break;
-}
-
-    return=0;
+    return 0;
 }

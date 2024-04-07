@@ -1,40 +1,30 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int main(){
- 
- char unit;
- float temp;
+int main() {
+    char unit;
+    float temp;
 
+    printf("Is temperature in F or C: ");
+    scanf("%c", &unit);
 
- printf("is temprature in F OR C");
-scanf(%c, &unit);
+    unit = toupper(unit);
 
-unit = touppercase(unit);
+    if (unit == 'F') {
+        printf("Enter temperature in Fahrenheit: ");
+        scanf("%f", &temp);
 
-if (unit=='F')
-{
-    printf("enter farenheight");
-    scanf(%f,&temp)
+        temp = ((temp - 32) * 5) / 9;
+        printf("The temperature in Celsius is %.1f\n", temp);
+    } else if (unit == 'C') {
+        printf("Enter temperature in Celsius: ");
+        scanf("%f", &temp);
 
-    temp =  ((temp-32)*5) /9;
-    printf("the temp in farenhight is %.1f",temp);
-}
+        temp = (temp * 9 / 5) + 32;
+        printf("The temperature in Fahrenheit is %.1f\n", temp);
+    } else {
+        printf("\n%c is not a valid unit of measurement\n", unit);
+    }
 
-else if (unit == 'C')
-{
-      printf("enter farenheight");
-    scanf(%f,&temp)
-
-    temp =  (temp * 9/5)=32;
-    printf("the temp in farenhight is %.1f",temp);
-}
-
-else
-{
-    printf("\n%c is not vlid unit of meausurement",unit);
-}
-
-
-    return=0;
+    return 0;
 }
