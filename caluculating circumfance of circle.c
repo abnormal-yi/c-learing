@@ -1,12 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    const double PI = 3.14159;
+
+    //decraration of variable 
+    const double PI = 3.14159;//%f %c %lf %d
     double radius;
     double circumference;
     double area;
 
-    printf("Enter radius: ");
+    printf("Enter radius: ");//output
     scanf("%lf", &radius);
 
     circumference = 2 * PI * radius;

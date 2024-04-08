@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
-#include <stdlib.h> // Added for srand and rand functions
+#include <stdlib.h>
 #include <time.h>
 
 // Constants should be defined with a data type
@@ -22,7 +22,6 @@ int main() {
                            "B: MEDIUM    ODD.4.50   @ 300 total game you will play",
                            "C: DIFICULT  ODD 9.50   @ 500 total game you will play"};
 
-    // Removed unnecessary array option[] and answers[] since they are not used
 
     printf("*******************YI********************LUCKY*******GAME*************************\n");
     printf("HELLO YOUR WELCOME\n");
