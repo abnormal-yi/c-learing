@@ -2,6 +2,20 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <time.h>
+/**
+ * Defines constants for the minimum and maximum values of various game parameters.
+ *
+ * These constants are used throughout the game logic to ensure that user input and
+ * game state values are within the expected ranges.
+ */
+const double min = 1;
+const double max = 6;
+const double minmoney = 100;
+const double maxmoney = 100000;
+const double minwithdraw = 200;
+const double maxwithdraw = 10000;
+
+
 
 // Constants should be defined with a data type
 const double min = 1;
