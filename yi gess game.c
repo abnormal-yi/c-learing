@@ -11,6 +11,7 @@ const double maxmoney = 100000;
 const double minwithdraw = 200;
 const double maxwithdraw = 10000;
 
+// I NEED GOOD EXPLANATION ON THIS 
 int main()
 {
     // Variables
