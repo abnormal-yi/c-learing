@@ -40,4 +40,4 @@ Welcome to the C-Learning repository! This repository is dedicated to learning a
 
 Join our community of C programmers! Feel free to ask questions, share your insights, and collaborate with fellow learners. Your journey to mastering C programming starts here!
 
-Happy Coding! 🚀
+Happy Coding! 🚀🥰🖤❤️
