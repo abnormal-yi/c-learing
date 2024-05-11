@@ -33,11 +33,5 @@ else if (youngest_age == koba){
 else{
     printf("king is the youngest");
 }
-
-
-
-
-
-
-    return 0;
+  return 0;
 }
