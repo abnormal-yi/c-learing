@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Loady/Documents/GitHub/school/c-learing/output",
-      "program": "c:/Users/Loady/Documents/GitHub/school/c-learing/output/build/Debug/outDebug",
+      "cwd": "c:/Users/Loady/Documents/GitHub/school/c-learing",
+      "program": "c:/Users/Loady/Documents/GitHub/school/c-learing/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
