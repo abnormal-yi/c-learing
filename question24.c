@@ -1,29 +1,27 @@
-#include<stdio.h>
-int main(){
+#include <stdio.h>
 
-int marry, john, luca;
+int main() {
+    int marry, john, luca, youngest;
 
-printf("enter marry's age");
-scanf("%d", &marry);
+    printf("Enter Mary's age: ");
+    scanf("%d", &marry);
 
-printf("enter john's age");
-scanf("%d", &john);
+    printf("Enter John's age: ");
+    scanf("%d", &john);
 
-printf("enter luca's age");
-scanf("%d", &luca);
+    printf("Enter Luca's age: ");
+    scanf("%d", &luca);
 
-if(marry > john){
-    printf("john is youngest");
-}
-
-else if(marry > luca){
-    printf("luca is youngest");
-
-}
-      else{
-        printf("luca is oldest");
-      }
-
+    if (marry <= john && marry <= luca) {
+        youngest = marry;
+    } else if (john <= marry && john <= luca) {
+        youngest = john;
+    } else {
+        youngest = luca;
+    }
+//not complete this stupid condition i dont know where 😐😐😐😒😒
+  //   if (youngest == marry)
+    printf("The youngest is %d years old.\n", youngest);
 
     return 0;
 }
